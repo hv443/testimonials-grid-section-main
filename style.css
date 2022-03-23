@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+
+
+:root{
+
+
+    /* ### Primary */
+
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    
+    /* ### Neutral */
+    
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+    
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--Lightgrayishblue);
+    width: 100%;
+    font-family: Barlow Semi Condensed;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 4rem 0;
+}
+p{
+    font-weight: 500;
+    margin-top: 1rem;
+    color:hsla(0, 0%, 81%, 0.762);
+}
+strong{
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--Lightgrayishblue);
+    /* color: var(--White); */
+}
+
+main{
+    display: grid;
+    grid-template-areas:"grid1 grid1 grid2 grid5"
+    "grid3 grid4 grid4 grid5";
+    grid-gap:1.5rem;
+    margin-bottom: 3rem;
+    width: 75%;
+}
+
+.grid1,.grid2,.grid3,.grid4,.grid5{
+    border-radius: .4rem;
+    padding: 2rem;
+}
+
+
+.grid1{
+    background: url(./images/bg-pattern-quotation.svg)no-repeat var(--Moderateviolet);
+    background-position-x:80%;
+    grid-area: grid1;
+}
+.grid1 img{
+    border: 2px solid rgb(165, 122, 233) ;
+}
+
+.grid2{
+    background-color:var(--Verydarkgrayishblue);
+    grid-area: grid2;
+    max-width: 250px;
+}
+
+.grid3{
+    background-color: var(--White);
+    grid-area: grid3;
+    max-width: 250px;
+}
+
+.grid4{
+    background-color: var(--Verydarkblackishblue);
+    grid-area: grid4;
+}
+.grid4 img{
+    border: 2px solid var(--Moderateviolet);
+}
+
+.grid5{
+    background-color: var(--White);
+    grid-area: grid5;
+    max-width: 250px;
+}
+.grid5 strong,
+.grid5 .profile,
+.grid3 .profile,
+.grid3 strong{
+    color: var(--Verydarkgrayishblue);
+}
+.grid5 p,
+.grid5 span,
+.grid3 span,
+.grid3 p{
+    color:hsla(217, 30%, 14%, 0.435);
+}
+
+
+.profile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--Lightgrayishblue);
+    font-weight: 600;
+    font-size: 14px;
+}
+span{
+    font-weight: 500;
+    font-size: 12px;
+    color: hsla(210, 46%, 95%, 0.435);
+}
+
+img{
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 1rem;
+}
+
+
+
+@media screen and (max-width:850px) {
+    
+    main{
+        width: 90%;
+        grid-template-areas: "grid1""grid2""grid3""grid4""grid5";     
+    }
+    .grid1,.grid2,.grid3,.grid4,.grid5{
+        max-width: 100%;
+    }
+}
