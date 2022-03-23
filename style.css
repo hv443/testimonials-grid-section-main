@@ -132,7 +132,7 @@ img{
 
 
 
-@media screen and (min-width:850px) {
+@media screen and (min-width:1200px) {
     
     main{
     grid-template-areas:"grid1 grid1 grid2 grid5"
