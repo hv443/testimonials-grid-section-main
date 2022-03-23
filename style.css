@@ -83,6 +83,7 @@ main{
     background-color: var(--White);
     grid-area: grid3;
     max-width: 250px;
+    box-shadow: 0 30px  50px rgba(0, 0, 0, 0.374);
 }
 
 .grid4{
@@ -97,6 +98,7 @@ main{
     background-color: var(--White);
     grid-area: grid5;
     max-width: 250px;
+    box-shadow: 0 30px  50px rgba(0, 0, 0, 0.374);
 }
 .grid5 strong,
 .grid5 .profile,
