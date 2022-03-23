@@ -46,16 +46,14 @@ strong{
     font-weight: 600;
     font-size: 18px;
     color: var(--Lightgrayishblue);
-    /* color: var(--White); */
 }
 
 main{
+    width: 90%;
     display: grid;
-    grid-template-areas:"grid1 grid1 grid2 grid5"
-    "grid3 grid4 grid4 grid5";
     grid-gap:1.5rem;
     margin-bottom: 3rem;
-    width: 75%;
+    grid-template-areas: "grid1""grid2""grid3""grid4""grid5";  
 }
 
 .grid1,.grid2,.grid3,.grid4,.grid5{
@@ -76,13 +74,12 @@ main{
 .grid2{
     background-color:var(--Verydarkgrayishblue);
     grid-area: grid2;
-    max-width: 250px;
+   
 }
 
 .grid3{
     background-color: var(--White);
     grid-area: grid3;
-    max-width: 250px;
     box-shadow: 0 30px  50px rgba(0, 0, 0, 0.374);
 }
 
@@ -97,7 +94,6 @@ main{
 .grid5{
     background-color: var(--White);
     grid-area: grid5;
-    max-width: 250px;
     box-shadow: 0 30px  50px rgba(0, 0, 0, 0.374);
 }
 .grid5 strong,
@@ -136,13 +132,49 @@ img{
 
 
 
-@media screen and (max-width:850px) {
+@media screen and (min-width:850px) {
     
     main{
-        width: 90%;
-        grid-template-areas: "grid1""grid2""grid3""grid4""grid5";     
-    }
-    .grid1,.grid2,.grid3,.grid4,.grid5{
-        max-width: 100%;
-    }
+    grid-template-areas:"grid1 grid1 grid2 grid5"
+    "grid3 grid4 grid4 grid5";
+    max-width: 75%;
+}
+
+    
+.grid1{
+    background: url(./images/bg-pattern-quotation.svg)no-repeat var(--Moderateviolet);
+    background-position-x:80%;
+    grid-area: grid1;
+}
+.grid1 img{
+    border: 2px solid rgb(165, 122, 233) ;
+}
+
+.grid2{
+    background-color:var(--Verydarkgrayishblue);
+    grid-area: grid2;
+    max-width: 250px;
+}
+
+.grid3{
+    background-color: var(--White);
+    grid-area: grid3;
+    max-width: 250px;
+    box-shadow: 0 30px  50px rgba(0, 0, 0, 0.374);
+}
+
+.grid4{
+    background-color: var(--Verydarkblackishblue);
+    grid-area: grid4;
+}
+.grid4 img{
+    border: 2px solid var(--Moderateviolet);
+}
+
+.grid5{
+    background-color: var(--White);
+    grid-area: grid5;
+    max-width: 250px;
+    box-shadow: 0 30px  50px rgba(0, 0, 0, 0.374);
+}
 }
